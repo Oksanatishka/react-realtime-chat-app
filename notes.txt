@@ -1,0 +1,42 @@
+Resources: 
+- https://codeburst.io/build-a-chat-app-with-sentiment-analysis-using-next-js-c43ebf3ea643
+- https://github.com/christiannwamba/realtime-chat-with-sentiment
+
+$$ Prerequisites - core technologies.
+1) Next.js — framework for building server-side rendered(SSR) React apps.
+2) Pusher — technology for building apps with varying realtime needs(push notifications and pub/sub messaging).
+3) Sentiment — module that uses the AFINN-165 wordlist and Emoji Sentiment Ranking to perform sentiment analysis on arbitrary blocks of input text.
+4) React — js DOM rendering framework for building scalable web applications using a component-based architecture.
+5) A few other libraries.
+
+$$ Installing dependencies
+> mkdir realtime-chat-app
+> cd realtime-chat-app  
+> npm init -y  
+> npm install react react-dom next pusher pusher-js sentiment
+> npm install express body-parser cors dotenv axios
+
+$$ Setting environment variables
+- Create a new application on your Pusher Dashboard to get your app credentials. 
+- Create a .env
+- Create a next.config.js (Next.js configuration file, Next.js uses Webpack in the background for module loading and bundling)
+
+$$ Setting up the server (using Next.js to wrap an Express application server)
+- Create a server.js
+
+$$ Modify npm scripts (of the package.json)
+> npm run dev
+
+$$ Building the index page
+- create /pages/index.js    -> create IndexPage component.
+- create /components/Layout.js
+
+$$ Building the Chat component
+- create /components/Chat.js -> add it to /pages/index.js
+
+$$ Defining the messaging routes
+- create the /message and /messages routes by modifying the server.js
+
+$$ Displaying the chat messages
+- create /components/ChatMessage.js
+- modify /components/Chat.js to render the chat messages from the state.
